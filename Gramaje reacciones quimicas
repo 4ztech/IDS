@@ -1,0 +1,64 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+int main()
+{
+    int i,l;
+    float v,v2,p,p2,r2,nr2,r,tf,tf2,ti,nti,x,ti2,nti2,y,ql,qs,ntf,ntf2,dift,dift2,ndift2,a;
+do{    
+    printf ("Que dato tienes que sacar\n 1-Temperatura\t 2-Peso\n");
+    scanf("%i", &i);
+        switch(i)
+        {
+            case 1:
+            printf ("Dame los mililitros o gramos de la sustancia\n");
+            scanf("%f", &v);
+            printf ("Dame la temperatura inicial\n");
+            scanf("%f", &ti);
+            r=v*4.18;
+            nti=ti*-1;
+            x=nti*r;
+            printf ("Dame los mililitros o gramos de la sustancia\n");
+            scanf("%f", &v2);
+           printf ("Dame la temperatura inicial\n");
+            scanf("%f", &ti2);
+            r2=v2*4.18;
+            nr2=r2*-1;
+            y=ti2*nr2;
+            ql=r-nr2;
+            qs=x-y;
+            tf=qs/ql;
+            tf=tf*-1;
+            printf("La temperatura fue de %f centigrados",tf);
+            
+            
+            break;
+            
+            case 2:
+            printf ("Dame los mililitros o gramos de la sustancia\n");
+            scanf("%f", &v);
+            printf ("Dame la temperatura inicial\n");
+            scanf("%f", &ti);
+             printf ("Dame la temperatura final\n");
+            scanf("%f", &tf);
+            dift=ti-tf;
+            r=v*4.18*dift;
+            printf ("Dame la temperatura inicial de la sustancia 2\n");
+            scanf("%f", &ti2);
+             printf ("Dame la temperatura final de la sustancia 2 \n");
+            scanf("%f", &tf2);
+            dift2=ti2-tf2;
+            ndift2=4.18*dift2;
+            a=r/ndift2*-1;
+             printf("Se necesitan %f gramos para cambiar a la temperatura deseada",a);
+            break;
+            
+        }
+printf("Quieres hacer otro calculo presiona 1 sino presiona otra tecla\n");
+scanf("%i",&l);
+}while(l==1);
+
+    return 0;
+}
